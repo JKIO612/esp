@@ -1,0 +1,9 @@
+Open On-Chip Debugger v0.12.0-esp32-20230419 (2023-04-18-22:02)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : only one transport option; autoselecting 'jtag'
+Info : esp_usb_jtag: VID set to 0x303a and PID to 0x1001
+Info : esp_usb_jtag: capabilities descriptor set to 0x2000
+Warn : Transport "jtag" was already selected
+Error: couldn't bind tcl to socket on port 6666: Address already in use
