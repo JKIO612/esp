@@ -1,0 +1,761 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004c632
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb64
+load:0x403ce710,len:0x2e48
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.2-dev-3318-g8fc8f3f479 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Nov 12 2023 22:33:02[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (74) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=21cb8h (138424) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=00031ce0 vaddr=3fc91600 size=025cch (  9676) load[0m
+[0;32mI (119) esp_image: segment 2: paddr=000342b4 vaddr=40380000 size=0bd64h ( 48484) load[0m
+[0;32mI (132) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=8f710h (587536) map[0m
+[0;32mI (228) esp_image: segment 4: paddr=000cf738 vaddr=4038bd64 size=05748h ( 22344) load[0m
+[0;32mI (238) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (238) boot: Disabling RNG early entropy source...[0m
+[0;32mI (249) cpu_start: Unicore app[0m
+[0;32mI (258) cpu_start: Pro cpu start user code[0m
+[0;32mI (258) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (258) cpu_start: Application information:[0m
+[0;32mI (261) cpu_start: Project name:     hidd_demos[0m
+[0;32mI (266) cpu_start: App version:      1831e84-dirty[0m
+[0;32mI (272) cpu_start: Compile time:     Nov 12 2023 22:32:35[0m
+[0;32mI (278) cpu_start: ELF file SHA256:  a7abdfea6...[0m
+[0;32mI (283) cpu_start: ESP-IDF:          v5.2-dev-3318-g8fc8f3f479[0m
+[0;32mI (290) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (295) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (299) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (304) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (311) heap_init: At 3FC98300 len 00044410 (273 KiB): DRAM[0m
+[0;32mI (318) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (324) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (331) spi_flash: detected chip: generic[0m
+[0;32mI (335) spi_flash: flash io: dio[0m
+[0;33mW (339) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (352) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (363) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (370) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (377) coexist: coex firmware version: 8770c12[0m
+[0;32mI (382) coexist: coexist rom version 9387209[0m
+[0;32mI (387) main_task: Started on CPU0[0m
+[0;32mI (387) main_task: Calling app_main()[0m
+[0;32mI (397) BLE_INIT: BT controller compile version [c8aa206][0m
+[0;32mI (397) BLE_INIT: Bluetooth MAC: 34:85:18:02:48:ae[0m
+[0;32mI (407) phy_init: phy_version 1130,b4e4b80,Sep  5 2023,11:09:30[0m
+[0;32mI (467) HID_LE_PRF: esp_hidd_prf_cb_hdl(), start added the hid service to the stack database. incl_handle = 40[0m
+[0;32mI (467) HID_LE_PRF: hid svc handle = 2d[0m
+[0;32mI (477) main_task: Returned from app_main()[0m
+[0;32mI (1957) HID_LE_PRF: HID connection establish, conn_id = 0[0m
+[0;32mI (1957) HID_DEMO: ESP_HIDD_EVENT_BLE_CONNECT[0m
+[0;32mI (2297) HID_DEMO: remote BD_ADDR: 3c22fba1b34c[0m
+[0;32mI (2297) HID_DEMO: address type = 0[0m
+[0;32mI (2297) HID_DEMO: pair status = success[0m
+[0;32mI (2377) HID_DEMO: Move mouse[0m
+[0;32mI (2377) : DOWN LEFT[0m
+[0;32mI (2477) HID_DEMO: Move mouse[0m
+[0;32mI (2477) : DOWN LEFT[0m
+[0;32mI (2577) HID_DEMO: Move mouse[0m
+[0;32mI (2577) : DOWN LEFT[0m
+[0;32mI (2677) HID_DEMO: Move mouse[0m
+[0;32mI (2677) : DOWN LEFT[0m
+[0;32mI (2777) HID_DEMO: Move mouse[0m
+[0;32mI (2777) : DOWN LEFT[0m
+[0;32mI (2877) HID_DEMO: Move mouse[0m
+[0;32mI (2877) : DOWN LEFT[0m
+[0;32mI (2977) HID_DEMO: Move mouse[0m
+[0;32mI (2977) : DOWN LEFT[0m
+[0;32mI (3077) HID_DEMO: Move mouse[0m
+[0;32mI (3077) : DOWN LEFT[0m
+[0;32mI (3177) HID_DEMO: Move mouse[0m
+[0;32mI (3177) : DOWN LEFT[0m
+[0;32mI (3277) HID_DEMO: Move mouse[0m
+[0;32mI (3277) : DOWN LEFT[0m
+[0;32mI (3377) HID_DEMO: Move mouse[0m
+[0;32mI (3377) : UP LEFT[0m
+[0;32mI (3477) HID_DEMO: Move mouse[0m
+[0;32mI (3577) HID_DEMO: Move mouse[0m
+[0;32mI (3577) : UP LEFT[0m
+[0;32mI (3677) HID_DEMO: Move mouse[0m
+[0;32mI (3677) : UP LEFT[0m
+[0;32mI (3777) HID_DEMO: Move mouse[0m
+[0;32mI (3777) : LEFT[0m
+[0;32mI (3877) HID_DEMO: Move mouse[0m
+[0;32mI (3877) : UP LEFT[0m
+[0;32mI (3977) HID_DEMO: Move mouse[0m
+[0;32mI (3977) : UP LEFT[0m
+[0;32mI (4077) HID_DEMO: Move mouse[0m
+[0;32mI (4077) : UP LEFT[0m
+[0;32mI (4177) HID_DEMO: Move mouse[0m
+[0;32mI (4177) : LEFT[0m
+[0;32mI (4277) HID_DEMO: Move mouse[0m
+[0;32mI (4277) : DOWN RIGHT[0m
+[0;32mI (4377) HID_DEMO: Move mouse[0m
+[0;32mI (4377) : DOWN RIGHT[0m
+[0;32mI (4477) HID_DEMO: Move mouse[0m
+[0;32mI (4477) : DOWN RIGHT[0m
+[0;32mI (4577) HID_DEMO: Move mouse[0m
+[0;32mI (4577) : UP RIGHT[0m
+[0;32mI (4677) HID_DEMO: Move mouse[0m
+[0;32mI (4677) : UP RIGHT[0m
+[0;32mI (4777) HID_DEMO: Move mouse[0m
+[0;32mI (4777) : UP LEFT[0m
+[0;32mI (4877) HID_DEMO: Move mouse[0m
+[0;32mI (4877) : UP[0m
+[0;32mI (4977) HID_DEMO: Move mouse[0m
+[0;32mI (4977) : UP RIGHT[0m
+[0;32mI (5077) HID_DEMO: Move mouse[0m
+[0;32mI (5077) : UP RIGHT[0m
+[0;32mI (5177) HID_DEMO: Move mouse[0m
+[0;32mI (5177) : UP LEFT[0m
+[0;32mI (5277) HID_DEMO: Move mouse[0m
+[0;32mI (5277) : UP[0m
+[0;32mI (5377) HID_DEMO: Move mouse[0m
+[0;32mI (5377) : UP RIGHT[0m
+[0;32mI (5477) HID_DEMO: Move mouse[0m
+[0;32mI (5477) : UP LEFT[0m
+[0;32mI (5577) HID_DEMO: Move mouse[0m
+[0;32mI (5577) : UP LEFT[0m
+[0;32mI (5677) HID_DEMO: Move mouse[0m
+[0;32mI (5677) : UP LEFT[0m
+[0;32mI (5777) HID_DEMO: Move mouse[0m
+[0;32mI (5777) : UP LEFT[0m
+[0;32mI (5877) HID_DEMO: Move mouse[0m
+[0;32mI (5877) : UP LEFT[0m
+[0;32mI (5977) HID_DEMO: Move mouse[0m
+[0;32mI (5977) : UP LEFT[0m
+[0;32mI (6077) HID_DEMO: Move mouse[0m
+[0;32mI (6077) : UP LEFT[0m
+[0;32mI (6177) HID_DEMO: Move mouse[0m
+[0;32mI (6177) : UP LEFT[0m
+[0;32mI (6277) HID_DEMO: Move mouse[0m
+[0;32mI (6277) : UP LEFT[0m
+[0;32mI (6377) HID_DEMO: Move mouse[0m
+[0;32mI (6377) : UP LEFT[0m
+[0;32mI (6477) HID_DEMO: Move mouse[0m
+[0;32mI (6477) : UP LEFT[0m
+[0;32mI (6577) HID_DEMO: Move mouse[0m
+[0;32mI (6577) : UP LEFT[0m
+[0;32mI (6677) HID_DEMO: Move mouse[0m
+[0;32mI (6677) : UP LEFT[0m
+[0;32mI (6777) HID_DEMO: Move mouse[0m
+[0;32mI (6777) : UP LEFT[0m
+[0;32mI (6877) HID_DEMO: Move mouse[0m
+[0;32mI (6877) : UP LEFT[0m
+[0;32mI (6977) HID_DEMO: Move mouse[0m
+[0;32mI (6977) : UP LEFT[0m
+[0;32mI (7077) HID_DEMO: Move mouse[0m
+[0;32mI (7077) : UP LEFT[0m
+[0;32mI (7177) HID_DEMO: Move mouse[0m
+[0;32mI (7177) : LEFT[0m
+[0;32mI (7277) HID_DEMO: Move mouse[0m
+[0;32mI (7277) : LEFT[0m
+[0;32mI (7377) HID_DEMO: Move mouse[0m
+[0;32mI (7377) : LEFT[0m
+[0;32mI (7477) HID_DEMO: Move mouse[0m
+[0;32mI (7477) : LEFT[0m
+[0;32mI (7577) HID_DEMO: Move mouse[0m
+[0;32mI (7577) : LEFT[0m
+[0;32mI (7677) HID_DEMO: Move mouse[0m
+[0;32mI (7677) : LEFT[0m
+[0;32mI (7777) HID_DEMO: Move mouse[0m
+[0;32mI (7777) : LEFT[0m
+[0;32mI (7877) HID_DEMO: Move mouse[0m
+[0;32mI (7877) : LEFT[0m
+[0;32mI (7977) HID_DEMO: Move mouse[0m
+[0;32mI (7977) : LEFT[0m
+[0;32mI (8077) HID_DEMO: Move mouse[0m
+[0;32mI (8077) : LEFT[0m
+[0;32mI (8177) HID_DEMO: Move mouse[0m
+[0;32mI (8177) : LEFT[0m
+[0;32mI (8277) HID_DEMO: Move mouse[0m
+[0;32mI (8277) : LEFT[0m
+[0;32mI (8377) HID_DEMO: Move mouse[0m
+[0;32mI (8377) : UP LEFT[0m
+[0;32mI (8477) HID_DEMO: Move mouse[0m
+[0;32mI (8477) : LEFT[0m
+[0;32mI (8577) HID_DEMO: Move mouse[0m
+[0;32mI (8577) : LEFT[0m
+[0;32mI (8677) HID_DEMO: Move mouse[0m
+[0;32mI (8677) : UP[0m
+[0;32mI (8777) HID_DEMO: Move mouse[0m
+[0;32mI (8777) : UP RIGHT[0m
+[0;32mI (8877) HID_DEMO: Move mouse[0m
+[0;32mI (8977) HID_DEMO: Move mouse[0m
+[0;32mI (8977) : UP[0m
+[0;32mI (9077) HID_DEMO: Move mouse[0m
+[0;32mI (9077) : UP[0m
+[0;32mI (9177) HID_DEMO: Move mouse[0m
+[0;32mI (9177) : UP[0m
+[0;32mI (9277) HID_DEMO: Move mouse[0m
+[0;32mI (9277) : UP[0m
+[0;32mI (9377) HID_DEMO: Move mouse[0m
+[0;32mI (9377) : UP[0m
+[0;32mI (9477) HID_DEMO: Move mouse[0m
+[0;32mI (9477) : UP[0m
+[0;32mI (9577) HID_DEMO: Move mouse[0m
+[0;32mI (9577) : UP LEFT[0m
+[0;32mI (9677) HID_DEMO: Move mouse[0m
+[0;32mI (9677) : UP LEFT[0m
+[0;32mI (9777) HID_DEMO: Move mouse[0m
+[0;32mI (9777) : UP LEFT[0m
+[0;32mI (9877) HID_DEMO: Move mouse[0m
+[0;32mI (9877) : UP[0m
+[0;32mI (9977) HID_DEMO: Move mouse[0m
+[0;32mI (9977) : UP[0m
+[0;32mI (10077) HID_DEMO: Move mouse[0m
+[0;32mI (10177) HID_DEMO: Move mouse[0m
+[0;32mI (10277) HID_DEMO: Move mouse[0m
+[0;32mI (10377) HID_DEMO: Move mouse[0m
+[0;32mI (10377) : DOWN[0m
+[0;32mI (10477) HID_DEMO: Move mouse[0m
+[0;32mI (10577) HID_DEMO: Move mouse[0m
+[0;32mI (10677) HID_DEMO: Move mouse[0m
+[0;32mI (10777) HID_DEMO: Move mouse[0m
+[0;32mI (10877) HID_DEMO: Move mouse[0m
+[0;32mI (10977) HID_DEMO: Move mouse[0m
+[0;32mI (11077) HID_DEMO: Move mouse[0m
+[0;32mI (11077) : DOWN LEFT[0m
+[0;32mI (11177) HID_DEMO: Move mouse[0m
+[0;32mI (11177) : DOWN[0m
+[0;32mI (11277) HID_DEMO: Move mouse[0m
+[0;32mI (11277) : DOWN[0m
+[0;32mI (11377) HID_DEMO: Move mouse[0m
+[0;32mI (11377) : DOWN[0m
+[0;32mI (11477) HID_DEMO: Move mouse[0m
+[0;32mI (11477) : DOWN[0m
+[0;32mI (11577) HID_DEMO: Move mouse[0m
+[0;32mI (11577) : DOWN[0m
+[0;32mI (11677) HID_DEMO: Move mouse[0m
+[0;32mI (11677) : DOWN LEFT[0m
+[0;32mI (11777) HID_DEMO: Move mouse[0m
+[0;32mI (11777) : DOWN LEFT[0m
+[0;32mI (11877) HID_DEMO: Move mouse[0m
+[0;32mI (11877) : DOWN[0m
+[0;32mI (11977) HID_DEMO: Move mouse[0m
+[0;32mI (11977) : DOWN LEFT[0m
+[0;32mI (12077) HID_DEMO: Move mouse[0m
+[0;32mI (12177) HID_DEMO: Move mouse[0m
+[0;32mI (12277) HID_DEMO: Move mouse[0m
+[0;32mI (12277) : DOWN[0m
+[0;32mI (12377) HID_DEMO: Move mouse[0m
+[0;32mI (12377) : DOWN[0m
+[0;32mI (12477) HID_DEMO: Move mouse[0m
+[0;32mI (12477) : DOWN[0m
+[0;32mI (12577) HID_DEMO: Move mouse[0m
+[0;32mI (12577) : DOWN[0m
+[0;32mI (12677) HID_DEMO: Move mouse[0m
+[0;32mI (12677) : DOWN[0m
+[0;32mI (12777) HID_DEMO: Move mouse[0m
+[0;32mI (12777) : DOWN[0m
+[0;32mI (12877) HID_DEMO: Move mouse[0m
+[0;32mI (12877) : DOWN[0m
+[0;32mI (12977) HID_DEMO: Move mouse[0m
+[0;32mI (13077) HID_DEMO: Move mouse[0m
+[0;32mI (13177) HID_DEMO: Move mouse[0m
+[0;32mI (13277) HID_DEMO: Move mouse[0m
+[0;32mI (13377) HID_DEMO: Move mouse[0m
+[0;32mI (13477) HID_DEMO: Move mouse[0m
+[0;32mI (13577) HID_DEMO: Move mouse[0m
+[0;32mI (13677) HID_DEMO: Move mouse[0m
+[0;32mI (13777) HID_DEMO: Move mouse[0m
+[0;32mI (13877) HID_DEMO: Move mouse[0m
+[0;32mI (13877) : DOWN[0m
+[0;32mI (13977) HID_DEMO: Move mouse[0m
+[0;32mI (13977) : DOWN[0m
+[0;32mI (14077) HID_DEMO: Move mouse[0m
+[0;32mI (14077) : DOWN[0m
+[0;32mI (14177) HID_DEMO: Move mouse[0m
+[0;32mI (14177) : DOWN[0m
+[0;32mI (14277) HID_DEMO: Move mouse[0m
+[0;32mI (14277) : DOWN[0m
+[0;32mI (14377) HID_DEMO: Move mouse[0m
+[0;32mI (14377) : DOWN[0m
+[0;32mI (14477) HID_DEMO: Move mouse[0m
+[0;32mI (14477) : DOWN[0m
+[0;32mI (14577) HID_DEMO: Move mouse[0m
+[0;32mI (14677) HID_DEMO: Move mouse[0m
+[0;32mI (14777) HID_DEMO: Move mouse[0m
+[0;32mI (14777) : RIGHT[0m
+[0;32mI (14877) HID_DEMO: Move mouse[0m
+[0;32mI (14877) : RIGHT[0m
+[0;32mI (14977) HID_DEMO: Move mouse[0m
+[0;32mI (14977) : UP RIGHT[0m
+[0;32mI (15077) HID_DEMO: Move mouse[0m
+[0;32mI (15077) : RIGHT[0m
+[0;32mI (15177) HID_DEMO: Move mouse[0m
+[0;32mI (15177) : UP RIGHT[0m
+[0;32mI (15277) HID_DEMO: Move mouse[0m
+[0;32mI (15277) : UP RIGHT[0m
+[0;32mI (15377) HID_DEMO: Move mouse[0m
+[0;32mI (15377) : UP RIGHT[0m
+[0;32mI (15477) HID_DEMO: Move mouse[0m
+[0;32mI (15477) : UP RIGHT[0m
+[0;32mI (15577) HID_DEMO: Move mouse[0m
+[0;32mI (15577) : UP RIGHT[0m
+[0;32mI (15677) HID_DEMO: Move mouse[0m
+[0;32mI (15677) : UP RIGHT[0m
+[0;32mI (15777) HID_DEMO: Move mouse[0m
+[0;32mI (15777) : UP RIGHT[0m
+[0;32mI (15877) HID_DEMO: Move mouse[0m
+[0;32mI (15877) : UP RIGHT[0m
+[0;32mI (15977) HID_DEMO: Move mouse[0m
+[0;32mI (15977) : UP RIGHT[0m
+[0;32mI (16077) HID_DEMO: Move mouse[0m
+[0;32mI (16077) : UP RIGHT[0m
+[0;32mI (16177) HID_DEMO: Move mouse[0m
+[0;32mI (16177) : UP RIGHT[0m
+[0;32mI (16277) HID_DEMO: Move mouse[0m
+[0;32mI (16277) : UP RIGHT[0m
+[0;32mI (16377) HID_DEMO: Move mouse[0m
+[0;32mI (16377) : UP RIGHT[0m
+[0;32mI (16477) HID_DEMO: Move mouse[0m
+[0;32mI (16477) : UP RIGHT[0m
+[0;32mI (16577) HID_DEMO: Move mouse[0m
+[0;32mI (16577) : UP RIGHT[0m
+[0;32mI (16677) HID_DEMO: Move mouse[0m
+[0;32mI (16677) : UP RIGHT[0m
+[0;32mI (16777) HID_DEMO: Move mouse[0m
+[0;32mI (16777) : UP RIGHT[0m
+[0;32mI (16877) HID_DEMO: Move mouse[0m
+[0;32mI (16877) : UP RIGHT[0m
+[0;32mI (16977) HID_DEMO: Move mouse[0m
+[0;32mI (16977) : UP RIGHT[0m
+[0;32mI (17077) HID_DEMO: Move mouse[0m
+[0;32mI (17077) : UP RIGHT[0m
+[0;32mI (17177) HID_DEMO: Move mouse[0m
+[0;32mI (17177) : UP RIGHT[0m
+[0;32mI (17277) HID_DEMO: Move mouse[0m
+[0;32mI (17277) : UP LEFT[0m
+[0;32mI (17377) HID_DEMO: Move mouse[0m
+[0;32mI (17377) : UP LEFT[0m
+[0;32mI (17477) HID_DEMO: Move mouse[0m
+[0;32mI (17477) : UP LEFT[0m
+[0;32mI (17577) HID_DEMO: Move mouse[0m
+[0;32mI (17577) : UP LEFT[0m
+[0;32mI (17677) HID_DEMO: Move mouse[0m
+[0;32mI (17677) : UP LEFT[0m
+[0;32mI (17777) HID_DEMO: Move mouse[0m
+[0;32mI (17777) : UP LEFT[0m
+[0;32mI (17877) HID_DEMO: Move mouse[0m
+[0;32mI (17877) : UP LEFT[0m
+[0;32mI (17977) HID_DEMO: Move mouse[0m
+[0;32mI (17977) : UP LEFT[0m
+[0;32mI (18077) HID_DEMO: Move mouse[0m
+[0;32mI (18077) : UP LEFT[0m
+[0;32mI (18177) HID_DEMO: Move mouse[0m
+[0;32mI (18177) : LEFT[0m
+[0;32mI (18277) HID_DEMO: Move mouse[0m
+[0;32mI (18277) : LEFT[0m
+[0;32mI (18377) HID_DEMO: Move mouse[0m
+[0;32mI (18377) : DOWN LEFT[0m
+[0;32mI (18477) HID_DEMO: Move mouse[0m
+[0;32mI (18477) : LEFT[0m
+[0;32mI (18577) HID_DEMO: Move mouse[0m
+[0;32mI (18577) : LEFT[0m
+[0;32mI (18677) HID_DEMO: Move mouse[0m
+[0;32mI (18677) : LEFT[0m
+[0;32mI (18777) HID_DEMO: Move mouse[0m
+[0;32mI (18777) : LEFT[0m
+[0;32mI (18877) HID_DEMO: Move mouse[0m
+[0;32mI (18877) : LEFT[0m
+[0;32mI (18977) HID_DEMO: Move mouse[0m
+[0;32mI (18977) : LEFT[0m
+[0;32mI (19077) HID_DEMO: Move mouse[0m
+[0;32mI (19077) : LEFT[0m
+[0;32mI (19177) HID_DEMO: Move mouse[0m
+[0;32mI (19177) : LEFT[0m
+[0;32mI (19277) HID_DEMO: Move mouse[0m
+[0;32mI (19277) : LEFT[0m
+[0;32mI (19377) HID_DEMO: Move mouse[0m
+[0;32mI (19377) : LEFT[0m
+[0;32mI (19477) HID_DEMO: Move mouse[0m
+[0;32mI (19477) : UP RIGHT[0m
+[0;32mI (19577) HID_DEMO: Move mouse[0m
+[0;32mI (19577) : UP RIGHT[0m
+[0;32mI (19677) HID_DEMO: Move mouse[0m
+[0;32mI (19677) : UP RIGHT[0m
+[0;32mI (19777) HID_DEMO: Move mouse[0m
+[0;32mI (19777) : UP RIGHT[0m
+[0;32mI (19877) HID_DEMO: Move mouse[0m
+[0;32mI (19877) : UP RIGHT[0m
+[0;32mI (19977) HID_DEMO: Move mouse[0m
+[0;32mI (19977) : UP RIGHT[0m
+[0;32mI (20077) HID_DEMO: Move mouse[0m
+[0;32mI (20077) : UP RIGHT[0m
+[0;32mI (20177) HID_DEMO: Move mouse[0m
+[0;32mI (20177) : UP RIGHT[0m
+[0;32mI (20277) HID_DEMO: Move mouse[0m
+[0;32mI (20277) : UP RIGHT[0m
+[0;32mI (20377) HID_DEMO: Move mouse[0m
+[0;32mI (20377) : UP RIGHT[0m
+[0;32mI (20477) HID_DEMO: Move mouse[0m
+[0;32mI (20477) : UP RIGHT[0m
+[0;32mI (20577) HID_DEMO: Move mouse[0m
+[0;32mI (20577) : UP RIGHT[0m
+[0;32mI (20677) HID_DEMO: Move mouse[0m
+[0;32mI (20677) : UP RIGHT[0m
+[0;32mI (20777) HID_DEMO: Move mouse[0m
+[0;32mI (20777) : UP RIGHT[0m
+[0;32mI (20877) HID_DEMO: Move mouse[0m
+[0;32mI (20877) : UP RIGHT[0m
+[0;32mI (20977) HID_DEMO: Move mouse[0m
+[0;32mI (20977) : UP RIGHT[0m
+[0;32mI (21077) HID_DEMO: Move mouse[0m
+[0;32mI (21077) : UP RIGHT[0m
+[0;32mI (21177) HID_DEMO: Move mouse[0m
+[0;32mI (21177) : UP RIGHT[0m
+[0;32mI (21277) HID_DEMO: Move mouse[0m
+[0;32mI (21277) : UP RIGHT[0m
+[0;32mI (21377) HID_DEMO: Move mouse[0m
+[0;32mI (21377) : UP RIGHT[0m
+[0;32mI (21477) HID_DEMO: Move mouse[0m
+[0;32mI (21477) : UP RIGHT[0m
+[0;32mI (21577) HID_DEMO: Move mouse[0m
+[0;32mI (21577) : UP RIGHT[0m
+[0;32mI (21677) HID_DEMO: Move mouse[0m
+[0;32mI (21677) : UP RIGHT[0m
+[0;32mI (21777) HID_DEMO: Move mouse[0m
+[0;32mI (21777) : UP RIGHT[0m
+[0;32mI (21877) HID_DEMO: Move mouse[0m
+[0;32mI (21877) : UP RIGHT[0m
+[0;32mI (21977) HID_DEMO: Move mouse[0m
+[0;32mI (21977) : UP RIGHT[0m
+[0;32mI (22077) HID_DEMO: Move mouse[0m
+[0;32mI (22077) : UP RIGHT[0m
+[0;32mI (22177) HID_DEMO: Move mouse[0m
+[0;32mI (22177) : UP RIGHT[0m
+[0;32mI (22277) HID_DEMO: Move mouse[0m
+[0;32mI (22277) : UP RIGHT[0m
+[0;32mI (22377) HID_DEMO: Move mouse[0m
+[0;32mI (22377) : RIGHT[0m
+[0;32mI (22477) HID_DEMO: Move mouse[0m
+[0;32mI (22477) : RIGHT[0m
+[0;32mI (22577) HID_DEMO: Move mouse[0m
+[0;32mI (22577) : RIGHT[0m
+[0;32mI (22677) HID_DEMO: Move mouse[0m
+[0;32mI (22677) : RIGHT[0m
+[0;32mI (22777) HID_DEMO: Move mouse[0m
+[0;32mI (22777) : RIGHT[0m
+[0;32mI (22877) HID_DEMO: Move mouse[0m
+[0;32mI (22877) : RIGHT[0m
+[0;32mI (22977) HID_DEMO: Move mouse[0m
+[0;32mI (22977) : RIGHT[0m
+[0;32mI (23077) HID_DEMO: Move mouse[0m
+[0;32mI (23077) : RIGHT[0m
+[0;32mI (23177) HID_DEMO: Move mouse[0m
+[0;32mI (23177) : RIGHT[0m
+[0;32mI (23277) HID_DEMO: Move mouse[0m
+[0;32mI (23277) : RIGHT[0m
+[0;32mI (23377) HID_DEMO: Move mouse[0m
+[0;32mI (23377) : RIGHT[0m
+[0;32mI (23477) HID_DEMO: Move mouse[0m
+[0;32mI (23477) : RIGHT[0m
+[0;32mI (23577) HID_DEMO: Move mouse[0m
+[0;32mI (23577) : UP RIGHT[0m
+[0;32mI (23677) HID_DEMO: Move mouse[0m
+[0;32mI (23677) : UP RIGHT[0m
+[0;32mI (23777) HID_DEMO: Move mouse[0m
+[0;32mI (23777) : UP RIGHT[0m
+[0;32mI (23877) HID_DEMO: Move mouse[0m
+[0;32mI (23877) : RIGHT[0m
+[0;32mI (23977) HID_DEMO: Move mouse[0m
+[0;32mI (23977) : RIGHT[0m
+[0;32mI (24077) HID_DEMO: Move mouse[0m
+[0;32mI (24177) HID_DEMO: Move mouse[0m
+[0;32mI (24177) : DOWN LEFT[0m
+[0;32mI (24277) HID_DEMO: Move mouse[0m
+[0;32mI (24277) : DOWN LEFT[0m
+[0;32mI (24377) HID_DEMO: Move mouse[0m
+[0;32mI (24477) HID_DEMO: Move mouse[0m
+[0;32mI (24477) : UP[0m
+[0;32mI (24577) HID_DEMO: Move mouse[0m
+[0;32mI (24577) : UP LEFT[0m
+[0;32mI (24677) HID_DEMO: Move mouse[0m
+[0;32mI (24677) : UP[0m
+[0;32mI (24777) HID_DEMO: Move mouse[0m
+[0;32mI (24777) : UP[0m
+[0;32mI (24877) HID_DEMO: Move mouse[0m
+[0;32mI (24877) : UP[0m
+[0;32mI (24977) HID_DEMO: Move mouse[0m
+[0;32mI (24977) : UP[0m
+[0;32mI (25077) HID_DEMO: Move mouse[0m
+[0;32mI (25077) : UP RIGHT[0m
+[0;32mI (25177) HID_DEMO: Move mouse[0m
+[0;32mI (25277) HID_DEMO: Move mouse[0m
+[0;32mI (25277) : LEFT[0m
+[0;32mI (25377) HID_DEMO: Move mouse[0m
+[0;32mI (25377) : LEFT[0m
+[0;32mI (25477) HID_DEMO: Move mouse[0m
+[0;32mI (25477) : UP LEFT[0m
+[0;32mI (25577) HID_DEMO: Move mouse[0m
+[0;32mI (25577) : LEFT[0m
+[0;32mI (25677) HID_DEMO: Move mouse[0m
+[0;32mI (25677) : DOWN LEFT[0m
+[0;32mI (25777) HID_DEMO: Move mouse[0m
+[0;32mI (25777) : DOWN[0m
+[0;32mI (25877) HID_DEMO: Move mouse[0m
+[0;32mI (25877) : DOWN[0m
+[0;32mI (25977) HID_DEMO: Move mouse[0m
+[0;32mI (25977) : DOWN RIGHT[0m
+[0;32mI (26077) HID_DEMO: Move mouse[0m
+[0;32mI (26077) : DOWN RIGHT[0m
+[0;32mI (26177) HID_DEMO: Move mouse[0m
+[0;32mI (26177) : DOWN RIGHT[0m
+[0;32mI (26277) HID_DEMO: Move mouse[0m
+[0;32mI (26277) : DOWN RIGHT[0m
+[0;32mI (26377) HID_DEMO: Move mouse[0m
+[0;32mI (26377) : DOWN RIGHT[0m
+[0;32mI (26477) HID_DEMO: Move mouse[0m
+[0;32mI (26477) : DOWN RIGHT[0m
+[0;32mI (26577) HID_DEMO: Move mouse[0m
+[0;32mI (26577) : DOWN RIGHT[0m
+[0;32mI (26677) HID_DEMO: Move mouse[0m
+[0;32mI (26677) : DOWN RIGHT[0m
+[0;32mI (27777) HID_DEMO: Move mouse[0m
+[0;32mI (27777) : DOWN RIGHT[0m
+[0;32mI (27877) HID_DEMO: Move mouse[0m
+[0;32mI (27877) : DOWN RIGHT[0m
+[0;32mI (27977) HID_DEMO: Move mouse[0m
+[0;32mI (27977) : DOWN LEFT[0m
+[0;32mI (29077) HID_DEMO: Move mouse[0m
+[0;32mI (29077) : UP LEFT[0m
+[0;32mI (29177) HID_DEMO: Move mouse[0m
+[0;32mI (29177) : UP LEFT[0m
+[0;32mI (29277) HID_DEMO: Move mouse[0m
+[0;32mI (29277) : UP[0m
+[0;32mI (29377) HID_DEMO: Move mouse[0m
+[0;32mI (29377) : UP RIGHT[0m
+[0;32mI (29477) HID_DEMO: Move mouse[0m
+[0;32mI (29477) : RIGHT[0m
+[0;32mI (29577) HID_DEMO: Move mouse[0m
+[0;32mI (29577) : DOWN RIGHT[0m
+[0;32mI (29677) HID_DEMO: Move mouse[0m
+[0;32mI (29677) : DOWN[0m
+[0;32mI (29777) HID_DEMO: Move mouse[0m
+[0;32mI (29777) : DOWN[0m
+[0;32mI (29877) HID_DEMO: Move mouse[0m
+[0;32mI (29877) : DOWN[0m
+[0;32mI (29977) HID_DEMO: Move mouse[0m
+[0;32mI (29977) : DOWN[0m
+[0;32mI (30077) HID_DEMO: Move mouse[0m
+[0;32mI (30077) : DOWN[0m
+[0;32mI (30177) HID_DEMO: Move mouse[0m
+[0;32mI (30177) : DOWN[0m
+[0;32mI (30277) HID_DEMO: Move mouse[0m
+[0;32mI (30277) : DOWN[0m
+[0;32mI (30377) HID_DEMO: Move mouse[0m
+[0;32mI (30377) : DOWN RIGHT[0m
+[0;32mI (30477) HID_DEMO: Move mouse[0m
+[0;32mI (30477) : RIGHT[0m
+[0;32mI (30577) HID_DEMO: Move mouse[0m
+[0;32mI (30577) : UP RIGHT[0m
+[0;32mI (30677) HID_DEMO: Move mouse[0m
+[0;32mI (30677) : UP RIGHT[0m
+[0;32mI (30777) HID_DEMO: Move mouse[0m
+[0;32mI (30777) : UP[0m
+[0;32mI (30877) HID_DEMO: Move mouse[0m
+[0;32mI (30877) : UP LEFT[0m
+[0;32mI (30977) HID_DEMO: Move mouse[0m
+[0;32mI (30977) : UP LEFT[0m
+[0;32mI (31077) HID_DEMO: Move mouse[0m
+[0;32mI (31077) : UP LEFT[0m
+[0;32mI (31177) HID_DEMO: Move mouse[0m
+[0;32mI (31177) : UP LEFT[0m
+[0;32mI (31277) HID_DEMO: Move mouse[0m
+[0;32mI (31277) : UP LEFT[0m
+[0;32mI (31377) HID_DEMO: Move mouse[0m
+[0;32mI (31377) : UP LEFT[0m
+[0;32mI (31477) HID_DEMO: Move mouse[0m
+[0;32mI (31477) : UP RIGHT[0m
+[0;32mI (31577) HID_DEMO: Move mouse[0m
+[0;32mI (31577) : UP LEFT[0m
+[0;32mI (31677) HID_DEMO: Move mouse[0m
+[0;32mI (31677) : UP LEFT[0m
+[0;32mI (31777) HID_DEMO: Move mouse[0m
+[0;32mI (31777) : UP LEFT[0m
+[0;32mI (31877) HID_DEMO: Move mouse[0m
+[0;32mI (31877) : UP LEFT[0m
+[0;32mI (31977) HID_DEMO: Move mouse[0m
+[0;32mI (31977) : UP[0m
+[0;32mI (32077) HID_DEMO: Move mouse[0m
+[0;32mI (32077) : LEFT[0m
+[0;32mI (32177) HID_DEMO: Move mouse[0m
+[0;32mI (32177) : LEFT[0m
+[0;32mI (32277) HID_DEMO: Move mouse[0m
+[0;32mI (32277) : LEFT[0m
+[0;32mI (32377) HID_DEMO: Move mouse[0m
+[0;32mI (32377) : LEFT[0m
+[0;32mI (32477) HID_DEMO: Move mouse[0m
+[0;32mI (32477) : LEFT[0m
+[0;32mI (32577) HID_DEMO: Move mouse[0m
+[0;32mI (32577) : LEFT[0m
+[0;32mI (32677) HID_DEMO: Move mouse[0m
+[0;32mI (32677) : LEFT[0m
+[0;32mI (32777) HID_DEMO: Move mouse[0m
+[0;32mI (32777) : LEFT[0m
+[0;32mI (32877) HID_DEMO: Move mouse[0m
+[0;32mI (32877) : LEFT[0m
+[0;32mI (32977) HID_DEMO: Move mouse[0m
+[0;32mI (32977) : UP LEFT[0m
+[0;32mI (33077) HID_DEMO: Move mouse[0m
+[0;32mI (33077) : UP LEFT[0m
+[0;32mI (33177) HID_DEMO: Move mouse[0m
+[0;32mI (33177) : UP LEFT[0m
+[0;32mI (33277) HID_DEMO: Move mouse[0m
+[0;32mI (33277) : UP LEFT[0m
+[0;32mI (33377) HID_DEMO: Move mouse[0m
+[0;32mI (33377) : UP LEFT[0m
+[0;32mI (33477) HID_DEMO: Move mouse[0m
+[0;32mI (33477) : UP LEFT[0m
+[0;32mI (33577) HID_DEMO: Move mouse[0m
+[0;32mI (33577) : UP LEFT[0m
+[0;32mI (33677) HID_DEMO: Move mouse[0m
+[0;32mI (33677) : UP LEFT[0m
+[0;32mI (33777) HID_DEMO: Move mouse[0m
+[0;32mI (33777) : UP LEFT[0m
+[0;32mI (33877) HID_DEMO: Move mouse[0m
+[0;32mI (33877) : UP LEFT[0m
+[0;32mI (33977) HID_DEMO: Move mouse[0m
+[0;32mI (33977) : UP LEFT[0m
+[0;32mI (34077) HID_DEMO: Move mouse[0m
+[0;32mI (34077) : UP LEFT[0m
+[0;32mI (34177) HID_DEMO: Move mouse[0m
+[0;32mI (34177) : UP LEFT[0m
+[0;32mI (34277) HID_DEMO: Move mouse[0m
+[0;32mI (34277) : UP LEFT[0m
+[0;32mI (34377) HID_DEMO: Move mouse[0m
+[0;32mI (34377) : UP LEFT[0m
+[0;32mI (34477) HID_DEMO: Move mouse[0m
+[0;32mI (34477) : UP LEFT[0m
+[0;32mI (34577) HID_DEMO: Move mouse[0m
+[0;32mI (34577) : UP LEFT[0m
+[0;32mI (34677) HID_DEMO: Move mouse[0m
+[0;32mI (34677) : UP LEFT[0m
+[0;32mI (34777) HID_DEMO: Move mouse[0m
+[0;32mI (34777) : UP LEFT[0m
+[0;32mI (34877) HID_DEMO: Move mouse[0m
+[0;32mI (34877) : UP LEFT[0m
+[0;32mI (34977) HID_DEMO: Move mouse[0m
+[0;32mI (34977) : UP LEFT[0m
+[0;32mI (35077) HID_DEMO: Move mouse[0m
+[0;32mI (35077) : UP LEFT[0m
+[0;32mI (35177) HID_DEMO: Move mouse[0m
+[0;32mI (35177) : UP LEFT[0m
+[0;32mI (35277) HID_DEMO: Move mouse[0m
+[0;32mI (35277) : UP LEFT[0m
+[0;32mI (35377) HID_DEMO: Move mouse[0m
+[0;32mI (35377) : UP LEFT[0m
+[0;32mI (35477) HID_DEMO: Move mouse[0m
+[0;32mI (35477) : UP LEFT[0m
+[0;32mI (35577) HID_DEMO: Move mouse[0m
+[0;32mI (35577) : UP[0m
+[0;32mI (35677) HID_DEMO: Move mouse[0m
+[0;32mI (35677) : UP[0m
+[0;32mI (35777) HID_DEMO: Move mouse[0m
+[0;32mI (35777) : UP[0m
+[0;32mI (35877) HID_DEMO: Move mouse[0m
+[0;32mI (35877) : UP[0m
+[0;32mI (35977) HID_DEMO: Move mouse[0m
+[0;32mI (35977) : UP[0m
+[0;32mI (36077) HID_DEMO: Move mouse[0m
+[0;32mI (36077) : UP LEFT[0m
+[0;32mI (36177) HID_DEMO: Move mouse[0m
+[0;32mI (36177) : UP[0m
+[0;32mI (36277) HID_DEMO: Move mouse[0m
+[0;32mI (36277) : DOWN RIGHT[0m
+[0;32mI (36377) HID_DEMO: Move mouse[0m
+[0;32mI (36377) : DOWN[0m
+[0;32mI (36477) HID_DEMO: Move mouse[0m
+[0;32mI (36477) : DOWN[0m
+[0;32mI (36577) HID_DEMO: Move mouse[0m
+[0;32mI (36577) : DOWN RIGHT[0m
+[0;32mI (36677) HID_DEMO: Move mouse[0m
+[0;32mI (36677) : DOWN RIGHT[0m
+[0;32mI (36777) HID_DEMO: Move mouse[0m
+[0;32mI (36777) : DOWN RIGHT[0m
+[0;32mI (36877) HID_DEMO: Move mouse[0m
+[0;32mI (36877) : DOWN RIGHT[0m
+[0;32mI (36977) HID_DEMO: Move mouse[0m
+[0;32mI (36977) : DOWN RIGHT[0m
+[0;32mI (37077) HID_DEMO: Move mouse[0m
+[0;32mI (37077) : DOWN RIGHT[0m
+[0;32mI (37177) HID_DEMO: Move mouse[0m
+[0;32mI (37177) : DOWN[0m
+[0;32mI (37277) HID_DEMO: Move mouse[0m
+[0;32mI (37277) : DOWN[0m
+[0;32mI (37377) HID_DEMO: Move mouse[0m
+[0;32mI (37377) : DOWN[0m
+[0;32mI (37477) HID_DEMO: Move mouse[0m
+[0;32mI (37477) : DOWN[0m
+[0;32mI (37577) HID_DEMO: Move mouse[0m
+[0;32mI (37577) : DOWN[0m
+[0;32mI (37677) HID_DEMO: Move mouse[0m
+[0;32mI (37677) : UP RIGHT[0m
+[0;32mI (37777) HID_DEMO: Move mouse[0m
+[0;32mI (37777) : UP[0m
+[0;32mI (37877) HID_DEMO: Move mouse[0m
+[0;32mI (37877) : UP RIGHT[0m
+[0;32mI (37977) HID_DEMO: Move mouse[0m
+[0;32mI (37977) : RIGHT[0m
+[0;32mI (38077) HID_DEMO: Move mouse[0m
+[0;32mI (38077) : RIGHT[0m
+[0;32mI (38177) HID_DEMO: Move mouse[0m
+[0;32mI (38177) : RIGHT[0m
+[0;32mI (38277) HID_DEMO: Move mouse[0m
+[0;32mI (38277) : RIGHT[0m
+[0;32mI (38377) HID_DEMO: Move mouse[0m
+[0;32mI (38377) : DOWN RIGHT[0m
+[0;32mI (38477) HID_DEMO: Move mouse[0m
+[0;32mI (38477) : RIGHT[0m
+[0;32mI (38577) HID_DEMO: Move mouse[0m
+[0;32mI (38577) : DOWN RIGHT[0m
+[0;32mI (38677) HID_DEMO: Move mouse[0m
+[0;32mI (38677) : DOWN[0m
+[0;32mI (38777) HID_DEMO: Move mouse[0m
+[0;32mI (38777) : DOWN[0m
+[0;32mI (38877) HID_DEMO: Move mouse[0m
+[0;32mI (38977) HID_DEMO: Move mouse[0m
+[0;32mI (38977) : LEFT[0m
+[0;32mI (39077) HID_DEMO: Move mouse[0m
+[0;32mI (39177) HID_DEMO: Move mouse[0m
+[0;32mI (39277) HID_DEMO: Move mouse[0m
+[0;32mI (39277) : DOWN[0m
+[0;32mI (39377) HID_DEMO: Move mouse[0m
+[0;32mI (39377) : DOWN[0m
+[0;32mI (39477) HID_DEMO: Move mouse[0m
+[0;32mI (39577) HID_DEMO: Move mouse[0m
+[0;32mI (39577) : LEFT[0m
+[0;32mI (39677) HID_DEMO: Move mouse[0m
+[0;32mI (39777) HID_DEMO: Move mouse[0m
+[0;32mI (39777) : LEFT[0m
+[0;32mI (39877) HID_DEMO: Move mouse[0m
+[0;32mI (39977) HID_DEMO: Move mouse[0m
+[0;32mI (39977) : LEFT[0m
+[0;32mI (40077) HID_DEMO: Move mouse[0m
+[0;32mI (40177) HID_DEMO: Move mouse[0m
+[0;32mI (40177) : LEFT[0m
+[0;32mI (40277) HID_DEMO: Move mouse[0m
+[0;32mI (40277) : UP LEFT[0m
+[0;32mI (40377) HID_DEMO: Move mouse[0m
+[0;32mI (40377) : LEFT[0m
+[0;32mI (40477) HID_DEMO: Move mouse[0m
+[0;32mI (40477) : UP RIGHT[0m
+[0;32mI (40577) HID_DEMO: Move mouse[0m
+[0;32mI (40577) : UP[0m
+[0;32mI (40677) HID_DEMO: Move mouse[0m
+[0;32mI (40677) : UP[0m
