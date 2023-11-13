@@ -168,10 +168,10 @@ static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param
 void hid_demo_task(void *pvParameters)
 {
     vTaskDelay(1000 / portTICK_PERIOD_MS);
-    while(1) {
+    while(true) {
         vTaskDelay(2000 / portTICK_PERIOD_MS);
-        if (sec_conn) {
-            ESP_LOGI(HID_DEMO_TAG, "Move mouse");
+        if (sec_conn == true) {
+            ESP_LOGI(HID_DEMO_TAG, "MOVING MOUSE");
 	    esp_hidd_send_mouse_value(hid_conn_id, 0, 30, 0);
 	    vTaskDelay(5000 / portTICK_PERIOD_MS);
 	    esp_hidd_send_mouse_value(hid_conn_id, 0,-30, 0);

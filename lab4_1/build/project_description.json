@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "lab4_1",
-    "project_version":    "1831e84-dirty",
+    "project_version":    "9427c81-dirty",
     "project_path":       "/home/ubuntu/esp/lab4_1",
     "idf_path":           "/home/ubuntu/esp/esp-idf",
     "build_dir":          "/home/ubuntu/esp/lab4_1/build",

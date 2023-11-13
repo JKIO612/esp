@@ -102,44 +102,42 @@ void icm42670_init() {
         i2c_write(0x1F, 0b00011111);
 }
 
-
-void read_gyro() {
+void get_direction() {
         int16_t x = (i2c_read(0x0B) << 8) | i2c_read(0x0C);
-        int16_t y = (i2c_read(0x0D) << 8) | i2c_read(0x0E);    
+        int16_t y = (i2c_read(0x0D) << 8) | i2c_read(0x0E);
 
-        if (y > 300 && (x > -300 && x <300)) {
+        if (y > 300 && x > -300 && x <300) {
                 ESP_LOGI("", "UP");
         }
 
-        else if (y < -300 && (x > -300 && x <300)) {
+        else if (y < -300 && x > -300 && x <300) {
                 ESP_LOGI("", "DOWN");
         }
 
-        else if (x > 300 && (y > -300 && y < 300)) {
+        else if (x > 300 && y > -300 && y < 300) {
                 ESP_LOGI("", "LEFT");
         }
 
-        else if (x < -300 && (y > -300 && y < 300)) {
+        else if (x < -300 && y > -300 && y < 300) {
                 ESP_LOGI("", "RIGHT");
         }
 
-        else if (y > 200 && (x < -300)) {
-                ESP_LOGI("", "UP RIGHT");
-        }
-
-        else if (y < - 200 && (x < -300)) {
-                ESP_LOGI("", "DOWN RIGHT");
-        }
-
-        else if (y > 200 && (x > 300)) {
+        else if (y > 200 && x > 300) {
                 ESP_LOGI("", "UP LEFT");
         }
 
-        else if (y < -200 && (x > 300)) {
+        else if (y > 200 && x < -300) {
+                ESP_LOGI("", "UP RIGHT");
+        }
+
+        else if (y < -200 && x > 300) {
                 ESP_LOGI("", "DOWN LEFT");
         }
-}
 
+        else if (y < - 200 && x < -300) {
+                ESP_LOGI("", "DOWN RIGHT");
+        }
+}
 
 static uint16_t hid_conn_id = 0;
 static bool sec_conn = false;
@@ -262,25 +260,25 @@ void hid_demo_task(void *pvParameters)
 {
     i2c_master_init();
     icm42670_init();
-    while(1) {
+    while(true){
         vTaskDelay(100 / portTICK_PERIOD_MS);
-        if (sec_conn) {
-            ESP_LOGI(HID_DEMO_TAG, "Move mouse");
-	    read_gyro();
+        if (sec_conn == true) {
+        	ESP_LOGI(HID_DEMO_TAG, "MOVING MOUSE");
+		get_direction();
 		int16_t x = (i2c_read(0x0B) << 8) | i2c_read(0x0C);
         	int16_t y = (i2c_read(0x0D) << 8) | i2c_read(0x0E);
-		if (y > 300 && (x > -300 && x <300)) {
+		if (y > 300 && x > -300 && x <300) {
                 	esp_hidd_send_mouse_value(hid_conn_id, 0, 0 , 24);
-       		 }
-       		 else if (y < -300 && (x > -300 && x <300)) {
-               		 esp_hidd_send_mouse_value(hid_conn_id, 0, 0, -24);
-       		 }
-       		 else if (x > 300 && (y > -300 && y < 300)) {
+       		}
+       		else if (y < -300 && x > -300 && x <300) {
+               		esp_hidd_send_mouse_value(hid_conn_id, 0, 0, -24);
+       		}
+       		else if (x > 300 && y > -300 && y < 300) {
                 	esp_hidd_send_mouse_value(hid_conn_id, 0, -24, 0);
-       		 }
-       		 else if (x < -300 && (y > -300 && y < 300)) {
+       		}
+       		else if (x < -300 && y > -300 && y < 300) {
         	        esp_hidd_send_mouse_value(hid_conn_id, 0, 24, 0);
-	     	 }
+	     	}
         }
     }
 }
