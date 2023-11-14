@@ -29,6 +29,12 @@
 #include "driver/gpio.h"
 #include "hid_dev.h"
 
+#define HID_DEMO_TAG "HID_DEMO"
+#define ICM42670_ADDR 0x68
+#define I2C_PORT I2C_NUM_0
+#define SDA_PIN 10
+#define SCL_PIN 8
+
 /**
  * Brief:
  * This example Implemented BLE HID device profile related functions, in which the HID device
@@ -47,14 +53,6 @@
  * we modify the permissions of the Report Characteristic Configuration Descriptor to `ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE_ENCRYPTED`.
  * if you got `GATT_INSUF_ENCRYPTION` error, please ignore.
  */
-
-#define HID_DEMO_TAG "HID_DEMO"
-
-
-#define ICM42670_ADDR 0x68
-#define I2C_PORT I2C_NUM_0
-#define SDA_PIN 10
-#define SCL_PIN 8
 
 
 void i2c_master_init() {
@@ -106,35 +104,35 @@ void get_direction() {
         int16_t x = (i2c_read(0x0B) << 8) | i2c_read(0x0C);
         int16_t y = (i2c_read(0x0D) << 8) | i2c_read(0x0E);
 
-        if (y > 300 && x > -300 && x <300) {
+        if (y > 298 && x > -298 && x < 298) {
                 ESP_LOGI("", "UP");
         }
 
-        else if (y < -300 && x > -300 && x <300) {
+        else if (y < -298 && x > -298 && x < 298) {
                 ESP_LOGI("", "DOWN");
         }
 
-        else if (x > 300 && y > -300 && y < 300) {
+        else if (x > 298 && y > -298 && y < 298) {
                 ESP_LOGI("", "LEFT");
         }
 
-        else if (x < -300 && y > -300 && y < 300) {
+        else if (x < -298 && y > -298 && y < 298) {
                 ESP_LOGI("", "RIGHT");
         }
 
-        else if (y > 200 && x > 300) {
+        else if (y > 200 && x > 298) {
                 ESP_LOGI("", "UP LEFT");
         }
 
-        else if (y > 200 && x < -300) {
+        else if (y > 200 && x < -298) {
                 ESP_LOGI("", "UP RIGHT");
         }
 
-        else if (y < -200 && x > 300) {
+        else if (y < -200 && x > 298) {
                 ESP_LOGI("", "DOWN LEFT");
         }
 
-        else if (y < - 200 && x < -300) {
+        else if (y < - 200 && x < -298) {
                 ESP_LOGI("", "DOWN RIGHT");
         }
 }
@@ -146,7 +144,7 @@ static bool sec_conn = false;
 
 static void hidd_event_callback(esp_hidd_cb_event_t event, esp_hidd_cb_param_t *param);
 
-#define HIDD_DEVICE_NAME            "HID"
+#define HIDD_DEVICE_NAME            "HID JEFF"
 static uint8_t hidd_service_uuid128[] = {
     /* LSB <--------------------------------------------------------------------------------> MSB */
     //first uuid, 16bit, [12],[13] is the value
@@ -261,22 +259,22 @@ void hid_demo_task(void *pvParameters)
     i2c_master_init();
     icm42670_init();
     while(true){
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(90 / portTICK_PERIOD_MS);
         if (sec_conn == true) {
         	ESP_LOGI(HID_DEMO_TAG, "MOVING MOUSE");
 		get_direction();
 		int16_t x = (i2c_read(0x0B) << 8) | i2c_read(0x0C);
         	int16_t y = (i2c_read(0x0D) << 8) | i2c_read(0x0E);
-		if (y > 300 && x > -300 && x <300) {
+		if (y > 298 && x > -298 && x < 298) {
                 	esp_hidd_send_mouse_value(hid_conn_id, 0, 0 , 24);
        		}
-       		else if (y < -300 && x > -300 && x <300) {
+       		else if (y < -298 && x > -298 && x < 298) {
                		esp_hidd_send_mouse_value(hid_conn_id, 0, 0, -24);
        		}
-       		else if (x > 300 && y > -300 && y < 300) {
+       		else if (x > 298 && y > -298 && y < 298) {
                 	esp_hidd_send_mouse_value(hid_conn_id, 0, -24, 0);
        		}
-       		else if (x < -300 && y > -300 && y < 300) {
+       		else if (x < -298 && y > -298 && y < 298) {
         	        esp_hidd_send_mouse_value(hid_conn_id, 0, 24, 0);
 	     	}
         }

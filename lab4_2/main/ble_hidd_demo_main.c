@@ -56,7 +56,7 @@ static bool sec_conn = false;
 
 static void hidd_event_callback(esp_hidd_cb_event_t event, esp_hidd_cb_param_t *param);
 
-#define HIDD_DEVICE_NAME            "HID"
+#define HIDD_DEVICE_NAME            "HID_JEFF"
 static uint8_t hidd_service_uuid128[] = {
     /* LSB <--------------------------------------------------------------------------------> MSB */
     //first uuid, 16bit, [12],[13] is the value
@@ -172,9 +172,9 @@ void hid_demo_task(void *pvParameters)
         vTaskDelay(2000 / portTICK_PERIOD_MS);
         if (sec_conn == true) {
             ESP_LOGI(HID_DEMO_TAG, "MOVING MOUSE");
-	    esp_hidd_send_mouse_value(hid_conn_id, 0, 30, 0);
+	    esp_hidd_send_mouse_value(hid_conn_id, 0, 25, 0);
 	    vTaskDelay(5000 / portTICK_PERIOD_MS);
-	    esp_hidd_send_mouse_value(hid_conn_id, 0,-30, 0);
+	    esp_hidd_send_mouse_value(hid_conn_id, 0,-25, 0);
         }
     }
 }
