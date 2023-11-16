@@ -86,10 +86,10 @@ void app_main(){
 
     while (1){
         gpio_set_level(TRIGGER_GPIO, 0);
-        esp_rom_delay_us(2);
+        esp_rom_delay_us(3);
 
         gpio_set_level(TRIGGER_GPIO, 1);  
-	esp_rom_delay_us(10);
+	esp_rom_delay_us(12);
 
 	gpio_set_level(TRIGGER_GPIO, 0);
 
@@ -102,14 +102,14 @@ void app_main(){
 
         uint32_t d = (esp_timer_get_time() - v) / temp;
 	int dis = (int)d;
-	vTaskDelay(100 / portTICK_PERIOD_MS);
+	vTaskDelay(120 / portTICK_PERIOD_MS);
 	float t = read_humidity_and_weather();
         
 	printf("Distance: %d cm at %.1fC \n", (int)dis, t);
         
 	gpio_set_level(TRIGGER_GPIO, 0);
-        esp_rom_delay_us(2);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        esp_rom_delay_us(3);
+        vTaskDelay(1200 / portTICK_PERIOD_MS);
     }
 }
 

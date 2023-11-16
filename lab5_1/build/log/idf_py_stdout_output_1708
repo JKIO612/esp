@@ -1,0 +1,74 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32c3
+-- Project sdkconfig file /home/ubuntu/esp/lab5_1/sdkconfig
+-- App "lab5_1" version: bb39f35-dirty
+-- Adding linker script /home/ubuntu/esp/lab5_1/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/ubuntu/esp/esp-idf/components/esp_system/ld/esp32c3/sections.ld.in
+-- Adding linker script /home/ubuntu/esp/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.ld
+-- Adding linker script /home/ubuntu/esp/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.api.ld
+-- Adding linker script /home/ubuntu/esp/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.libgcc.ld
+-- Adding linker script /home/ubuntu/esp/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.newlib.ld
+-- Adding linker script /home/ubuntu/esp/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.version.ld
+-- Adding linker script /home/ubuntu/esp/esp-idf/components/esp_rom/esp32c3/ld/esp32c3.rom.eco3.ld
+-- Adding linker script /home/ubuntu/esp/esp-idf/components/soc/esp32c3/ld/esp32c3.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table protobuf-c protocomm pthread riscv sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant
+-- Component paths: /home/ubuntu/esp/esp-idf/components/app_trace /home/ubuntu/esp/esp-idf/components/app_update /home/ubuntu/esp/esp-idf/components/bootloader /home/ubuntu/esp/esp-idf/components/bootloader_support /home/ubuntu/esp/esp-idf/components/bt /home/ubuntu/esp/esp-idf/components/cmock /home/ubuntu/esp/esp-idf/components/console /home/ubuntu/esp/esp-idf/components/cxx /home/ubuntu/esp/esp-idf/components/driver /home/ubuntu/esp/esp-idf/components/efuse /home/ubuntu/esp/esp-idf/components/esp-tls /home/ubuntu/esp/esp-idf/components/esp_adc /home/ubuntu/esp/esp-idf/components/esp_app_format /home/ubuntu/esp/esp-idf/components/esp_bootloader_format /home/ubuntu/esp/esp-idf/components/esp_coex /home/ubuntu/esp/esp-idf/components/esp_common /home/ubuntu/esp/esp-idf/components/esp_eth /home/ubuntu/esp/esp-idf/components/esp_event /home/ubuntu/esp/esp-idf/components/esp_gdbstub /home/ubuntu/esp/esp-idf/components/esp_hid /home/ubuntu/esp/esp-idf/components/esp_http_client /home/ubuntu/esp/esp-idf/components/esp_http_server /home/ubuntu/esp/esp-idf/components/esp_https_ota /home/ubuntu/esp/esp-idf/components/esp_https_server /home/ubuntu/esp/esp-idf/components/esp_hw_support /home/ubuntu/esp/esp-idf/components/esp_lcd /home/ubuntu/esp/esp-idf/components/esp_local_ctrl /home/ubuntu/esp/esp-idf/components/esp_mm /home/ubuntu/esp/esp-idf/components/esp_netif /home/ubuntu/esp/esp-idf/components/esp_netif_stack /home/ubuntu/esp/esp-idf/components/esp_partition /home/ubuntu/esp/esp-idf/components/esp_phy /home/ubuntu/esp/esp-idf/components/esp_pm /home/ubuntu/esp/esp-idf/components/esp_psram /home/ubuntu/esp/esp-idf/components/esp_ringbuf /home/ubuntu/esp/esp-idf/components/esp_rom /home/ubuntu/esp/esp-idf/components/esp_system /home/ubuntu/esp/esp-idf/components/esp_timer /home/ubuntu/esp/esp-idf/components/esp_wifi /home/ubuntu/esp/esp-idf/components/espcoredump /home/ubuntu/esp/esp-idf/components/esptool_py /home/ubuntu/esp/esp-idf/components/fatfs /home/ubuntu/esp/esp-idf/components/freertos /home/ubuntu/esp/esp-idf/components/hal /home/ubuntu/esp/esp-idf/components/heap /home/ubuntu/esp/esp-idf/components/http_parser /home/ubuntu/esp/esp-idf/components/idf_test /home/ubuntu/esp/esp-idf/components/ieee802154 /home/ubuntu/esp/esp-idf/components/json /home/ubuntu/esp/esp-idf/components/log /home/ubuntu/esp/esp-idf/components/lwip /home/ubuntu/esp/lab5_1/main /home/ubuntu/esp/esp-idf/components/mbedtls /home/ubuntu/esp/esp-idf/components/mqtt /home/ubuntu/esp/esp-idf/components/newlib /home/ubuntu/esp/esp-idf/components/nvs_flash /home/ubuntu/esp/esp-idf/components/nvs_sec_provider /home/ubuntu/esp/esp-idf/components/openthread /home/ubuntu/esp/esp-idf/components/partition_table /home/ubuntu/esp/esp-idf/components/protobuf-c /home/ubuntu/esp/esp-idf/components/protocomm /home/ubuntu/esp/esp-idf/components/pthread /home/ubuntu/esp/esp-idf/components/riscv /home/ubuntu/esp/esp-idf/components/sdmmc /home/ubuntu/esp/esp-idf/components/soc /home/ubuntu/esp/esp-idf/components/spi_flash /home/ubuntu/esp/esp-idf/components/spiffs /home/ubuntu/esp/esp-idf/components/tcp_transport /home/ubuntu/esp/esp-idf/components/ulp /home/ubuntu/esp/esp-idf/components/unity /home/ubuntu/esp/esp-idf/components/usb /home/ubuntu/esp/esp-idf/components/vfs /home/ubuntu/esp/esp-idf/components/wear_levelling /home/ubuntu/esp/esp-idf/components/wifi_provisioning /home/ubuntu/esp/esp-idf/components/wpa_supplicant
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ubuntu/esp/lab5_1/build
+[1/12] Performing build step for 'bootloader'
+[1/1] cd /home/ubuntu/esp/lab5_1/build/bootloader/esp-idf/esptool_py && /home/ubuntu/.espressif/python_env/idf5.2_py3.10_env/bin/python /home/ubuntu/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/ubuntu/esp/lab5_1/build/bootloader/bootloader.bin
+Bootloader binary size 0x5140 bytes. 0x2ec0 bytes (37%) free.
+[2/10] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[3/10] Linking C static library esp-idf/esp_app_format/libesp_app_format.a
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lab5_1.c.obj
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable lab5_1.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev2
+Creating esp32c3 image...
+Merged 2 ELF sections
+Successfully created esp32c3 image.
+Generated /home/ubuntu/esp/lab5_1/build/lab5_1.bin
+[9/10] cd /home/ubuntu/esp/lab5_1/build/esp-idf/esptool_py && /home/ubuntu/.espressif/python_env/idf5.2_py3.10_env/bin/python /home/ubuntu/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ubuntu/esp/lab5_1/build/partition_table/partition-table.bin /home/ubuntu/esp/lab5_1/build/lab5_1.bin
+lab5_1.bin binary size 0x2f900 bytes. Smallest app partition is 0x100000 bytes. 0xd0700 bytes (81%) free.
+[9/10] cd /home/ubuntu/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/ubuntu/esp/esp-idf -D "SERIAL_TOOL=/home/ubuntu/.espressif/python_env/idf5.2_py3.10_env/bin/python;;/home/ubuntu/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ubuntu/esp/lab5_1/build -P /home/ubuntu/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 lab5_1.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev2
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+MAC: 34:85:18:00:ad:18
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0003ffff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20800 bytes to 12793...
+Writing at 0x00000000... (100 %)
+Wrote 20800 bytes (12793 compressed) at 0x00000000 in 0.4 seconds (effective 461.3 kbit/s)...
+Hash of data verified.
+Compressed 194816 bytes to 101567...
+Writing at 0x00010000... (14 %)
+Writing at 0x0001b4a2... (28 %)
+Writing at 0x00021a06... (42 %)
+Writing at 0x00028c13... (57 %)
+Writing at 0x0002fcb0... (71 %)
+Writing at 0x000371b7... (85 %)
+Writing at 0x0003e1b3... (100 %)
+Wrote 194816 bytes (101567 compressed) at 0x00010000 in 1.6 seconds (effective 974.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 464.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

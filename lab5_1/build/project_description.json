@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "lab5_1",
-    "project_version":    "90e2075-dirty",
+    "project_version":    "bb39f35-dirty",
     "project_path":       "/home/ubuntu/esp/lab5_1",
     "idf_path":           "/home/ubuntu/esp/esp-idf",
     "build_dir":          "/home/ubuntu/esp/lab5_1/build",
